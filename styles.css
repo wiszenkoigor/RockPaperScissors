@@ -3,6 +3,10 @@
     --color-points: hsl(229, 25%, 31%);
     --color-score: hsl(229, 64%, 46%);
     --color-border: hsl(217, 16%, 45%);
+
+    --color-scissors: hsl(39, 89%, 49%), hsl(40, 84%, 53%);
+    --color-paper: hsl(230, 89%, 62%), hsl(230, 89%, 65%);
+    --color-rock: hsl(349, 71%, 52%), hsl(349, 70%, 56%);
 }
 
 * {
@@ -15,6 +19,7 @@ body {
     font-family: 'Barlow Semi Condensed', sans-serif;
     min-height: 100vh;
     min-width: 100vw;
+    padding: 48px ;
 }
 
 header {
@@ -23,8 +28,8 @@ header {
   border-radius: 5px;
   display: flex;
   justify-content: space-between;
-  margin: 0 auto;
-  max-width: 800px;
+  margin: auto;
+  max-width: 600px;
   padding: 12px 24px;
 
 }  
@@ -55,4 +60,56 @@ line-height: 24px;
     font-size: 54px;
     line-height: 42px;
    
+}
+
+main {
+    margin: 0 auto;
+    max-width: 600px;
+    padding: 160px 0px;
+}
+
+.options {
+    aspect-ratio: 313 / 278;
+    background-image: url("./images/bg-triangle.svg");
+    background-size: cover;
+    margin: 0 auto;
+    position: relative;
+    width: 50%;
+
+}
+
+.options .button {
+    position: absolute;
+    width: 50%;
+    border: none;
+    border-radius: 50%;
+    aspect-ratio: 1 / 1 ;
+}
+
+.button img {
+    background-color: var(--color-main);
+    width: 80%;
+    height: 80%;
+}
+
+.button--paper {
+    background-color: linear-gradient(var(--color-paper));
+    left: 0;
+    top: 0;
+    transform: translate(-50%, -50% );
+}
+
+.button--scissors {
+    background-color: linear-gradient(var(--color-scisso)rs);
+    right: 0;
+    top: 0;
+    transform: translate(50%, -50% );
+
+}
+
+.button--rock {
+    background-color: linear-gradient(var(--color-rock));
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, 50%);
 }
