@@ -59,6 +59,7 @@ line-height: 24px;
     display: block;
     font-size: 54px;
     line-height: 42px;
+    text-align: center;
    
 }
 
@@ -81,34 +82,72 @@ main {
 .options .button {
     position: absolute;
     width: 50%;
+ 
+}
+
+.button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     border: none;
+    aspect-ratio: 1 / 1;
     border-radius: 50%;
-    aspect-ratio: 1 / 1 ;
+    box-shadow: inset 0px -6px 0px rgba(0,0,0,0.25);
+    cursor: pointer;
+    
 }
 
 .button img {
-    background-color: var(--color-main);
-    width: 80%;
-    height: 80%;
+    width: 50%;
+    height: 50%;
 }
 
+.button__image-container {
+    background-color: var(--color-main);
+    border-radius: 50%;
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80%;
+    box-shadow: inset 0px 8px 0px rgba(0,0,0,0.15);
+}
+
+
+
 .button--paper {
-    background-color: linear-gradient(var(--color-paper));
+    background: linear-gradient(var(--color-paper));
+
+}
+
+.button--scissors {
+    background: linear-gradient(var(--color-scissors));
+  
+
+}
+
+.button--rock {
+    background: linear-gradient(var(--color-rock));
+  
+}
+
+.options .button--paper {
+    background: linear-gradient(var(--color-paper));
     left: 0;
     top: 0;
     transform: translate(-50%, -50% );
 }
 
-.button--scissors {
-    background-color: linear-gradient(var(--color-scisso)rs);
+.options .button--scissors {
+    background: linear-gradient(var(--color-scissors));
     right: 0;
     top: 0;
     transform: translate(50%, -50% );
 
 }
 
-.button--rock {
-    background-color: linear-gradient(var(--color-rock));
+.options .button--rock {
+    background: linear-gradient(var(--color-rock));
     bottom: 0;
     left: 50%;
     transform: translate(-50%, 50%);
